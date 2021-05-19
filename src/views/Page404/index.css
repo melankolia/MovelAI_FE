@@ -1,0 +1,86 @@
+#page {
+    position: relative;
+    height: 100vh;
+  }
+  
+#page .page {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+  
+.page {
+    max-width: 767px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    padding: 15px;
+}
+
+.page .page-404 {
+    position: relative;
+    height: 220px;
+}
+
+.page .page-404 h1 {
+    font-family: "Kanit", sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 186px;
+    font-weight: 200;
+    margin: 0px;
+    background: linear-gradient(130deg, #ffa34f, #ff6f68);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.page h2 {
+    font-family: "Kanit", sans-serif;
+    font-size: 33px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+
+.page p {
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.page a {
+    font-family: "Kanit", sans-serif;
+    color: #ff6f68;
+    font-weight: 200;
+    text-decoration: none;
+    border-bottom: 1px dashed #ff6f68;
+    border-radius: 2px;
+}
+
+@media only screen and (max-width: 480px) {
+.page .page-404 {
+    position: relative;
+    height: 168px;
+}
+
+.page .page-404 h1 {
+    font-size: 142px;
+}
+
+.page h2 {
+    font-size: 22px;
+}
+}

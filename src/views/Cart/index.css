@@ -1,0 +1,30 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meal-card-detail {
+    width: 100%;
+    height: 100px;
+}
+
+.card-body-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-meal-container {
+    width: 90vw;
+    height: 100%;
+}
+
+.container-restaurant-img {
+    display: flex;
+    flex-direction: row;
+}
+
+.restaurant-img {
+    width: 240px;
+}

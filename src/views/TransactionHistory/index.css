@@ -1,0 +1,26 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-history-container {
+    width: 90vw;
+    height: 100%
+}
+
+.card-history-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-restaurant-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.restaurant-img {
+    width: 240px;
+}
