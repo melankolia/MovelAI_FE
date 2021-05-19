@@ -7,7 +7,7 @@ const Helper = {
             result = `12:00 PM`;
         }
         else if (isPM) {
-            result = `0${firstHour.split(":00")[0] - 12}:00 PM`;
+            result = `${firstHour.split(":00")[0] - 12}:00 PM`;
         } else {
             result = `${firstHour.split(":00")[0]}:00 AM`;
         };

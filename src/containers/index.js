@@ -14,7 +14,8 @@ const Routes = props => {
         search: "",
         availableDays: "",
         openHour: "08:00",
-        closeHour: "21:00"
+        closeHour: "21:00",
+        resetPage: false
     });
     const [cart, setCart] = useState([]);
     const [countCart, setCountCart] = useState(0);
@@ -34,7 +35,7 @@ const Routes = props => {
         <BrowserRouter>
             <AppBar handleSubmit={(e) => setPayload({...e})} countCart={countCart}/>
             <Switch>
-                <Route exact path={RESTAURANT.ROOT} render={() => <Restaurant params={payload} />} />
+                <Route exact path={RESTAURANT.ROOT} render={() => <Restaurant params={payload} handleResetPage={() => setPayload({...payload, resetPage: false})}/>} />
                 <Route exact path={MIGRATIONS.ROOT} component={ Migrations } />
                 <Route exact path={RESTAURANT.DETAIL} render={() => <RestaurantDetail handleCart={e => setCart(current => [...current, e])} /> } />
                 <Route exact path={CART.ROOT} render={() => <Cart cart={cart} handleCart={e => handleCart(e)} handleClearCart={() => setCart([]) }/> } />

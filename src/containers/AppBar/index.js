@@ -26,7 +26,7 @@ const Container = ({ handleSubmit, countCart }) => {
         arg && arg.preventDefault();
         if (type === "button" || arg.currentTarget.checkValidity()){
             History.push("/");
-            handleSubmit({search, availableDays: filterDay.join(","), ...time});
+            handleSubmit({search, availableDays: filterDay.join(","), ...time, resetPage: true});
         };
     };
 

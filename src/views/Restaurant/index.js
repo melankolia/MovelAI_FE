@@ -5,7 +5,7 @@ import RestaurantService from 'services/resources/restaurant.service';
 import { Spinner } from 'react-bootstrap';
 import './index.css';
 
-const Restaurant = ({ params }) => {
+const Restaurant = ({ params, handleResetPage }) => {
   const [list, setList] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -18,7 +18,7 @@ const Restaurant = ({ params }) => {
       setLoading(true);
       const payload = {
         limit: 10,
-        page: activePage,
+        page: params.resetPage ? 1 : activePage,
         openHours: params.openHour,
         closeHours: params.closeHour,
         availableDays: params.availableDays,
@@ -62,6 +62,7 @@ const Restaurant = ({ params }) => {
             threeDots={true}
             prevNext={true}
             onClick={(e) => {
+              handleResetPage();
               setActivePage(e);
             }}
           />}
