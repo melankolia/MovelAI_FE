@@ -1,6 +1,8 @@
 # MovealAI Frontend
 
 ## How to use
+- Create .env file on your root project folder and fill with :
+	- REACT_APP_BASE_URL=Your Backend Address and port
 - Open terminal at your root project folder and Run 'yarn install'
 - Run 'yarn start' to start the app
 
