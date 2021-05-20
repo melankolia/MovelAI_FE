@@ -24,6 +24,10 @@ const MealDetail = (props, index, handleCart) => {
                             { Helper.upperCase(props.type_set) }
                         </Card.Text>
                         <Card.Text style={{ fontSize: "14px" }}>{props.description}</Card.Text>
+                        <Card.Text style={{ fontSize: "14px" }}>
+                            <b>Price : </b>
+                            ${props.price}
+                        </Card.Text>
                     </div>
                 </div>
                 <Button 
@@ -70,6 +74,14 @@ const Cart = ({ cart, handleCart, handleClearCart }) => {
         });
     }
 
+    const totalPrice = () => {
+        if (cart.length > 0) {
+            const total = cart.map(e => +e.price).reduce((p, c) => p + c);
+            return total.toFixed(2);
+        }
+        return 0.00;
+    };
+
     return (
         <div className="cart-container mt-4">
             <Card className="card-meal-container">
@@ -81,6 +93,7 @@ const Cart = ({ cart, handleCart, handleClearCart }) => {
                     }
                     { show && (<Alerts isError={isError} text="Checkout Data" className="mx-4 my-4" />) }
                 </Card.Body>
+                <Card.Title className="px-4 pt-4">Total Price : ${ totalPrice() } </Card.Title>
                 <Button 
                     handleClick={() => handleSubmit()} 
                     className="my-4 mx-4" 

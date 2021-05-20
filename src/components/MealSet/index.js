@@ -18,6 +18,10 @@ const MealSet = ({ detailRestaurant, detail, handleCart }) => {
                     <p className="mb-0" style={{ fontSize: "12px" }}>
                         { detail.description }
                     </p>
+                    <p className="mb-0" style={{ fontSize: "12px" }}>
+                        <br />
+                        <b>Price: </b> ${ detail.price }
+                    </p>
                 </div>
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>

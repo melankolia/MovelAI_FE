@@ -26,13 +26,13 @@ const Container = ({ handleSubmit, countCart }) => {
         arg && arg.preventDefault();
         if (type === "button" || arg.currentTarget.checkValidity()){
             History.push("/");
-            handleSubmit({search, availableDays: filterDay.join(","), ...time, resetPage: true});
+            handleSubmit({search, availableDays: filterDay.join(""), ...time, resetPage: true});
         };
     };
 
     const handleCheckBox = (arg, arg2, index) => {
         const copyFilter = [...filterDay];
-        arg2 ? copyFilter[index] = arg : copyFilter.splice(index, 1);
+        arg2 ? copyFilter[index] = arg : copyFilter[index] = null;
         setFilterDay([...copyFilter]);
     }
 

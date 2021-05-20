@@ -26,7 +26,8 @@ const MealDetail = (props, index) => {
                         </Card.Text>
                         <Card.Text style={{ fontSize: "14px" }}>{props.description}</Card.Text>
                         <Card.Text style={{ fontSize: "14px" }}>
-                            <b>Transaction Date : </b>{ Helper.converterDate(props.transaction_date)}
+                            <b>Price: </b>${props.price} <br />
+                            <b> Transaction Date : </b>{ Helper.converterDate(props.transaction_date)}
                         </Card.Text>
                     </div>
                 </div>
